@@ -25,7 +25,7 @@ UniMinds is an innovative educational platform designed specifically for childre
 	```
 2. **Navigate to the Frontend directory:**
 	```sh
-	cd UniMinds/Frontend
+	cd UniMinds
 	```
 3. **Install dependencies:**
 	```sh
@@ -45,7 +45,7 @@ UniMinds is an innovative educational platform designed specifically for childre
 	```
 2. **Navigate to the Frontend directory:**
 	```sh
-	cd UniMinds/Frontend
+	cd UniMinds
 	```
 3. **Build the project**
 	```sh
