@@ -2,7 +2,7 @@
 # UniMinds
 
 <p align="center">
-	<img src="Frontend/public/preview.png" alt="UniMinds Logo" width="600" height="auto" />
+	<img src="public/preview.png" alt="UniMinds Logo" width="600" height="auto" />
 </p>
 
 ## Description
