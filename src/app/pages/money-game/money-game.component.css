@@ -1,0 +1,443 @@
+/* ===================
+   Layout Container
+=================== */
+:host .body {
+  display: flex;
+  flex-direction: column;
+  background-color: #D9C1FF;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Modal overlay */
+.welcome-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.welcome-modal-content {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+}
+
+.welcome-modal-content h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #666A95;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Close button at top-right */
+#close-button {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#close-button img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+#close-button img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+/* Welcome GIF specific */
+.welcome-modal-content img {
+  max-width: 100%;
+  width: 800px;
+  border-radius: 10px;
+}
+
+
+#exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+#exit img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#exit img:hover {
+  transform: scale(1.05);
+  filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+#back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+#back img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#back img:hover {
+  transform: scale(1.05);
+  filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+.currency-counter {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 57px;
+
+}
+
+.denomination {
+  width: 100px;
+  margin: 0px 20px;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  padding: 0.3rem 0.6rem;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  border-radius: 3px;
+  border-color: blue;
+
+}
+
+.currency-counter {
+  margin-top: 100px;
+}
+
+.total {
+  font-size: 30px;
+}
+
+.problem {
+  text-align: center;
+  font-size: 36px;
+
+}
+
+.check_button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.check_button button {
+  background-color: #3d49d1;
+  /* A strong blue-purple tone */
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.check_button button:hover {
+  transform: scale(1.05);
+}
+
+
+/* ==================
+    memes-modal
+===================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  /* padding: 20px; */
+  border-radius: 10px;
+  text-align: center;
+  height: auto;
+  width: 300px;
+}
+
+.modal-content img {
+  /* height: 250px; */
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.modal-content p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ff0000;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .currency-counter h1 {
+    font-size: 30px;
+    margin-top: 5px;
+  }
+
+  .total {
+    font-size: 30px;
+  }
+
+  .denomination {
+    width: 80px;
+  }
+
+  .denomination img {
+    width: 90px;
+  }
+
+  .controls button {
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .modal-content {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: 200px;
+  }
+
+  .modal-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .modal-content p.wrong {
+    color: #ff1744;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+  .modal-content p.correct {
+    color: #00c853;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .currency-counter h1 {
+    font-size: 40px;
+    margin-top: 5px;
+  }
+
+  .total {
+    font-size: 40px;
+  }
+
+  .denomination {
+    width: 90px;
+  }
+
+  .denomination img {
+    width: 85px;
+  }
+
+  .controls button {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .modal-content {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: 250px;
+  }
+
+  .modal-content img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .modal-content p {
+    font-size: 20px;
+  }
+
+  .check_button button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .currency-counter h1 {
+    font-size: 42px;
+    margin-top: 50px;
+  }
+
+  .total {
+    font-size: 42px;
+  }
+
+  .denomination {
+    width: 150px;
+  }
+
+  .denomination img {
+    width: 110px;
+  }
+
+  .controls button {
+    font-size: 1.7rem;
+    padding: 0.2rem 0.2rem;
+    width: 40px;
+    height: auto;
+  }
+
+  #coin-count,
+  #note-count {
+    font-size: 1.7rem;
+    margin: 0 10px;
+  }
+
+  .modal-content {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: 450px;
+  }
+
+  .modal-content img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .modal-content p {
+    font-size: 24px;
+  }
+
+  .check_button button {
+    padding: 16px 32px;
+    font-size: 24px;
+    margin-top: 40px;
+    border-radius: 20px;
+  }
+
+  #exit img,
+  #back img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .currency-counter h1 {
+    font-size: 50px;
+    margin-top: 60px;
+  }
+
+  .total {
+    font-size: 50px;
+  }
+
+  .denomination {
+    width: 180px;
+  }
+
+  .denomination img {
+    width: 150px;
+  }
+
+  .controls button {
+    font-size: 2rem;
+    padding: 0.3rem 0.3rem;
+    width: 50px;
+    height: auto;
+  }
+
+  #coin-count,
+  #note-count {
+    font-size: 2rem;
+    margin: 0 15px;
+  }
+
+  .check_button button {
+    padding: 18px 36px;
+    font-size: 32px;
+    margin-top: 50px;
+    border-radius: 25px;
+  }
+
+  #exit img,
+  #back img {
+    height: 80px;
+    width: 80px;
+  }
+
+}

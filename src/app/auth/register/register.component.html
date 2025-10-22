@@ -1,0 +1,35 @@
+<div class="body">
+    <a (click)="exitToMenu()" id="exit">        
+        <img src="Assets/exit.png" alt="Exit">
+    </a>
+    
+    <div class="register">
+        <div class="circle-container">
+            <h1>Εγγραφή:</h1>
+            <div class="form">
+                <div class="input">
+                    <input type="text" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email:</label>
+                </div>
+
+                <div class="input">
+                    <input type="password" id="password" name="password" placeholder=" " required>
+                    <label for="password">Κωδικός:</label>
+                </div>
+                <!-- <div class="input">
+                    <select id="role" name="role" required>
+                        <option value="psychologist">Ειδικός</option>
+                        <option value="parent">Γονέας</option>
+                    </select>
+                </div> -->
+                <div class="login">
+                    <a (click)="goToLogin()">Έχετε ήδη λογαριασμό;</a>
+                </div>
+
+                <button type="submit">Εγγραφή</button>
+            </div>
+        </div>
+        <img src="Assets/Subtract.png" alt="circle background" class="circle-bg">
+        <img src="Assets/cloudAuth.png" id="cloud" alt="cloud graphic">
+    </div>
+</div>

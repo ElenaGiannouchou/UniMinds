@@ -1,0 +1,27 @@
+<div class="body">
+  <a (click)="exitToMenu()" id="exit">
+    <img src="Assets/exit.png" alt="Exit">
+  </a>
+
+  <a (click)="exitToGames()" id="back">
+    <img src="Assets/back.png" alt="Back">
+  </a>
+  <div class="instructionCard">
+    <div class="subcard">
+      <div class="title-wrapper">
+        <h1>Οδηγίες</h1>
+        <button (click)="playInstructions()"> <img src="Assets/sound.png" alt="play"> </button>
+      </div>
+      <p #instructions>
+        Κάθε φορά θα βλέπεις μια διαφορετική πράξη πρόσθεση ή αφαίρεση μέχρι το 10.
+        <br><br>Εσύ πρέπει να διαλέξεις το σωστό αποτέλεσμα.
+        <br><br>Αν απαντήσεις σωστά, προχωράς στο επόμενο!
+      </p>
+
+    </div>
+  </div>
+
+  <div class="playButton">
+    <button (click)="startGame()">Ξεκινάμε <img src="Assets/play.png" alt="play"></button>
+  </div>
+</div>

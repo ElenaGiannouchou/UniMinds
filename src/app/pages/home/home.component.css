@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.background {
+  height: 100vh;              /* Full viewport height */
+  width: 100vw;               /* Full viewport width */
+  background: url('/uniminds.png') center center / cover no-repeat;
+  display: flex;              /* Enable flexbox */
+  justify-content: center;    /* Horizontal center */
+  align-items: center;        /* Vertical center */
+}
+
+.welcome {
+  position: absolute;
+  top: 320px;
+  left: 415px;
+  font-size: 35.7px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  white-space: nowrap;
+  display: flex;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: bounceIn 0.6s forwards;
+}
+
+/* Προσθέτουμε animation-delay σε κάθε γράμμα για αλληλουχία */
+.letter:nth-child(1) { animation-delay: 0.05s; }
+.letter:nth-child(2) { animation-delay: 0.10s; }
+.letter:nth-child(3) { animation-delay: 0.15s; }
+.letter:nth-child(4) { animation-delay: 0.20s; }
+.letter:nth-child(5) { animation-delay: 0.25s; }
+.letter:nth-child(6) { animation-delay: 0.30s; }
+.letter:nth-child(7) { animation-delay: 0.35s; }
+.letter:nth-child(8) { animation-delay: 0.40s; }
+.letter:nth-child(9) { animation-delay: 0.45s; }
+.letter:nth-child(10) { animation-delay: 0.50s; }
+.letter:nth-child(11) { animation-delay: 0.55s; }
+.letter:nth-child(12) { animation-delay: 0.60s; }
+.letter:nth-child(13) { animation-delay: 0.65s; }
+.letter:nth-child(14) { animation-delay: 0.70s; }
+.letter:nth-child(15) { animation-delay: 0.75s; }
+.letter:nth-child(16) { animation-delay: 0.80s; }
+.letter:nth-child(17) { animation-delay: 0.85s; }
+.letter:nth-child(18) { animation-delay: 0.90s; }
+.letter:nth-child(19) { animation-delay: 0.95s; }
+.letter:nth-child(20) { animation-delay: 1.00s; }
+.letter:nth-child(21) { animation-delay: 1.05s; }
+.letter:nth-child(22) { animation-delay: 1.10s; }
+.letter:nth-child(23) { animation-delay: 1.15s; }
+.letter:nth-child(24) { animation-delay: 1.20s; }
+.letter:nth-child(25) { animation-delay: 1.25s; }
+.letter:nth-child(26) { animation-delay: 1.30s; }
+.letter:nth-child(27) { animation-delay: 1.35s; }
+.letter:nth-child(28) { animation-delay: 1.40s; }
+.letter:nth-child(29) { animation-delay: 1.45s; }
+.letter:nth-child(30) { animation-delay: 1.50s; }
+.letter:nth-child(31) { animation-delay: 1.55s; }
+.letter:nth-child(32) { animation-delay: 1.60s; }
+.letter:nth-child(33) { animation-delay: 1.65s; }
+.letter:nth-child(34) { animation-delay: 1.70s; }
+.letter:nth-child(35) { animation-delay: 1.75s; }
+.letter:nth-child(36) { animation-delay: 1.80s; }
+.letter:nth-child(37) { animation-delay: 1.85s; }
+.letter:nth-child(38) { animation-delay: 1.90s; }
+.letter:nth-child(39) { animation-delay: 1.95s; }
+.letter:nth-child(40) { animation-delay: 2.00s; }
+.letter:nth-child(41) { animation-delay: 2.05s; }
+.letter:nth-child(42) { animation-delay: 2.10s; }
+
+
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    top: 250px;
+    left: 200px;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .welcome {
+    top: 400px;
+    left: 350px;
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .welcome {
+    top: 400px;
+    left: 370px;
+    font-size: 40px;
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .welcome {
+    top: 450px;
+    left: 520px;
+    font-size: 50px;
+  }
+}
+
+
+@media (min-width:2560px) {
+  .welcome {
+    top: 650px;
+    left: 700px;
+    font-size: 65px;
+  }
+}

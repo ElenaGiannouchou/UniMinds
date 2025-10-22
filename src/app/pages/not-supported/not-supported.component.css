@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #ffcccc, #ffe6e6);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align:left;
+  padding: 2rem;
+}
+
+.warning h1 {
+  font-size: 2.5rem;
+  color: #b00020;
+  margin-bottom: 1rem;
+}
+
+.warning p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #444;
+    border : 10px solid #b00020;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: color-mix(in srgb, #fff3f3 50%, #ffcccc 50%);
+    font-family: cosmic-sans-ms, sans-serif;
+}
+
+.warning img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .warning h1 {
+    font-size: 2rem;
+  }
+
+  .warning p {
+    font-size: 1.2rem;
+  }
+
+.warning img {
+    width: 150px;
+    height: auto;
+}
+}

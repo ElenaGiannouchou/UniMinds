@@ -1,0 +1,46 @@
+<div class="body">
+  <a (click)="exitToMenu()" id="exit">
+    <img src="Assets/exit.png" alt="Exit">
+  </a>
+
+  <a (click)="goToMathInstructions()" id="back">
+    <img src="Assets/back.png" alt="Back">
+  </a>
+
+  <!--HintModal -->
+  <div *ngIf="showWelcomeModal" class="welcome-modal-overlay">
+    <div class="welcome-modal-content">
+      <h2>Βοήθεια!</h2>
+      <a (click)="closeWelcomeModal()" id="close-button">
+        <img src="Assets/exit.png" alt="Exit">
+      </a>
+      <img [src]="welcomeGif" alt="Welcome GIF" />
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="problem">
+        {{ num1 }} {{operation}} {{ num2 }} =
+        <span class="answer">{{ selectedAnswer !== null ? selectedAnswer : '___' }}</span>
+      </div>
+    </div>
+
+    <div class="number-pad">
+      <button class="number" *ngFor="let num of numbers" (click)="selectNumber(num)">
+        {{ num }}
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+      <img [src]="modalImage" alt="Meme" />
+      <p [ngClass]="selectedAnswer === correctAnswer ? 'correct' : 'wrong'">
+        {{ selectedAnswer === correctAnswer ? 'Μπράβο! Σωστή απάντηση!' : 'Προσπάθησε ξανά!' }}
+      </p>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,63 @@
+<div class="body">
+  <a (click)="exitToMenu()" id="exit">
+    <img src="Assets/exit.png" alt="Exit">
+  </a>
+
+  <a (click)="goToMoneyInstructions()" id="back">
+    <img src="Assets/back.png" alt="Back">
+  </a>
+
+    <!--HintModal -->
+  <div *ngIf="showWelcomeModal" class="welcome-modal-overlay">
+    <div class="welcome-modal-content">
+      <h2>Βοήθεια!</h2>
+      <a (click)="closeWelcomeModal()" id="close-button">
+        <img src="Assets/exit.png" alt="Exit">
+      </a>
+      <img [src]="welcomeGif" alt="Welcome GIF" />
+    </div>
+  </div>
+
+  <div class="currency-counter">
+    <h1>Δώσε μου {{ currentProblem.euros }} ευρώ και {{ currentProblem.cents }} λεπτά.</h1>
+
+    <h3 class="total">Σύνολο: {{ total.toFixed(2) }} € </h3>
+
+    <section class="section">
+      <div class="denomination" *ngFor="let note of banknotes">
+        <img [src]="'Assets/' + note.image" [alt]="note.value + '€ note'">
+        <div class="controls">
+          <button (click)="decrease(note)">−</button>
+          <span id="note-count">{{ note.count }}</span>
+          <button (click)="increase(note)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="denomination" *ngFor="let coin of coins">
+        <img [src]="'Assets/' + coin.image" [alt]="coin.value + '€ coin'">
+        <div class="controls">
+          <button (click)="decrease(coin)">−</button>
+          <span id="coin-count">{{ coin.count }}</span>
+          <button (click)="increase(coin)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="check_button">
+      <button (click)="checkAnswer()">Έλεγχος Απάντησης</button>
+    </div>
+
+    <!--  Meme Modal Feedback -->
+    <div *ngIf="showModal" class="modal-overlay">
+      <div class="modal-content">
+        <img [src]="modalImage" alt="Meme" />
+        <p [ngClass]="matchWasWrong ? 'wrong' : 'correct'">
+          {{ matchWasWrong ? 'Προσπάθησε ξανά!' : 'Μπράβο! Σωστή απάντηση!' }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>

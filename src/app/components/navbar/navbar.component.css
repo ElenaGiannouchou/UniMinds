@@ -1,0 +1,285 @@
+.header {
+  position: relative;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 120px;
+  left: 35%;
+  bottom: 120px;
+  border-radius: 0px;
+  margin-top: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: perspective(200px) scaleX(1.1) rotateX(-20deg);
+  transform-style: preserve-3d;
+}
+
+.nav-buttons-wrapper {
+  transform: perspective(200px) scaleX(0.91) rotateX(10deg);
+  transform-style: preserve-3d;
+  z-index: 2;
+  position: relative;
+  transform-origin: top;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: #e0e0ff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 10px;
+  font-size: 16px;
+  height: 50px;
+  width: 145px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  cursor: pointer;
+  color: black;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.nav-buttons button:hover {
+  background: #BCECD7;
+}
+
+.nav-buttons button:last-child {
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  padding: 0;
+}
+
+.nav-buttons button img {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+#person {
+  width: 60px;
+  height: 60px;
+  margin-top: auto;
+}
+
+#person img {
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+}
+
+/* --------------------------------------- */
+/*  Small Phones (≤ 480px) */
+@media (max-width: 480px) {
+  .header {
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: none !important;
+    padding: 10px 0;
+  }
+
+  .nav-buttons-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    transform: none !important;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px;
+    scrollbar-width: none;
+  }
+
+  .nav-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-buttons button {
+    min-width: 44px;
+    height: 40px;
+    font-size: 10px;
+    padding: 4px 6px;
+    border-radius: 15px;
+    flex-shrink: 0;
+  }
+
+  .nav-buttons button img {
+    width: 14px;
+    height: 14px;
+  }
+
+  #person {
+    width: 32px;
+    height: 32px;
+  }
+
+  #person img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Optional: hide button text on very small screens */
+  .nav-buttons button span {
+    display: none;
+  }
+}
+
+
+/* Medium screens: 1024px */
+@media (min-width: 1024px) {
+  .header {
+    width: 60%;
+    left: 36%;
+    height: 120px;
+    flex-direction: column;
+  }
+
+  .nav-buttons-wrapper {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .nav-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-buttons button {
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  #person {
+    width: 60px;
+    height: 60px;
+  }
+
+  #person img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Large screens: 1440px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .header {
+    width: 60%;
+    left: 35%;
+  }
+
+  .nav-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 5px;
+  }
+
+  .nav-buttons button {
+    width: 155px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  #person {
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+  }
+
+  #person img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header {
+    width: 60%;
+    left: 33%;
+    height: 180px;
+  }
+
+  .nav-buttons{
+    gap: 50px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .nav-buttons button {
+    width: 190px;
+    height: 85px;
+    font-size: 20px;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 10px;
+
+  }
+
+  #person {
+    width: 95px;
+    height: 95px;
+  }
+
+  #person img {
+    width: 65px;
+    height: 65px;
+  }
+
+}
+
+/* Extra-large screens: 2560px and up */
+@media (min-width: 2560px) {
+  .header {
+    width: 60%;
+    left: 33%;
+    height: 200px;
+  }
+
+  .nav-buttons {
+    gap: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  .nav-buttons button {
+    width: 250px;
+    height: 100px;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 60px;
+  }
+
+  #person {
+    width: 120px;
+    height: 120px;
+  }
+
+  #person img {
+    width: 80px;
+    height: 80px;
+  }
+}

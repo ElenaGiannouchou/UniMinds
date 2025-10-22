@@ -1,0 +1,32 @@
+<div class="body">
+  <a (click)="exitToMenu()" id="exit">
+    <img src="Assets/exit.png" alt="Exit">
+  </a>
+
+  <a (click)="exitToGames()" id="back">
+    <img src="Assets/back.png" alt="Back">
+  </a>
+  <div class="instructionCard">
+    <div class="subcard">
+      <div class="title-wrapper">
+        <h1>Οδηγίες</h1>
+        <button (click)="playInstructions()"> <img src="Assets/sound.png" alt="play"> </button>
+      </div>
+      <p #instructions>
+       Αν δεν έχεις δει πρώτα τα βίντεο,
+
+        <br> Πήγαινε στην κατηγορία Βίντεο, δες τα, και έλα ξανά αργότερα.
+
+        <br><br>Aν τα ειδες συνέχισε!
+
+        <br><br>Τώρα, κάνε κλικ για να ταιριάξεις κάθε εικόνα από τους 12 Θεούς Ομάδα Α, με τη σωστή καρτέλα που έχει το όνομά
+        του Ομάδα Β.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="playButton">
+    <button (click)="startGame()">Ξεκινάμε <img src="Assets/play.png" alt="play"></button>
+  </div>
+</div>

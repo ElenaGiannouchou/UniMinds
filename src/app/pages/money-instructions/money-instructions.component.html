@@ -1,0 +1,27 @@
+<div class="body">
+  <a (click)="exitToMenu()" id="exit">
+    <img src="Assets/exit.png" alt="Exit">
+  </a>
+
+  <a (click)="exitToGames()" id="back">
+    <img src="Assets/back.png" alt="Back">
+  </a>
+  <div class="instructionCard">
+    <div class="subcard">
+      <div class="title-wrapper">
+        <h1>Οδηγίες</h1>
+        <button (click)="playInstructions()"> <img src="Assets/sound.png" alt="play"> </button>
+      </div>
+      <p #instructions>
+        Κάθε φορά θα εμφανίζεται ένα ποσό.
+        <br><br>Η αποστολή σου είναι να διαλέξεις τα σωστά χαρτονομίσματα και κέρματα.
+        <br><br>Συνδύασέ τα έτσι ώστε να φτιάξεις ακριβώς το ποσό που χρειάζεται.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="playButton">
+    <button (click)="startGame()">Ξεκινάμε <img src="Assets/play.png" alt="play"></button>
+  </div>
+</div>

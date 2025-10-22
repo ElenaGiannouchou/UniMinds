@@ -1,0 +1,126 @@
+/* ===================
+   Global Styles
+=================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #D9C1FF;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===================
+   Layout Container
+=================== */
+:host .body {
+  display: flex;
+  flex-direction: column;
+  background-color: #D9C1FF;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px; /* spacing between videos */
+  padding: 20px;
+}
+
+.video-item {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.title {
+    text-align: left;
+    font-size: 24px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #404DC6;
+    margin-top: 80px;
+
+}
+
+
+#exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+#exit img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#exit img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .video-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  #exit img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .title {
+    margin-top: 100px;
+  }
+
+  .title h1{
+    font-size: 48px;
+
+  }
+
+  #exit img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 2560px) {
+  .video-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .title {
+    font-size: 42px;
+    margin-top: 60px;
+  }
+
+  #exit img {
+    height: 80px;
+    width: 80px;
+  }
+}

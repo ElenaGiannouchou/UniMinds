@@ -1,0 +1,140 @@
+/* ===================
+   Layout Container
+=================== */
+:host .body {
+  display: flex;
+  flex-direction: column;
+  background-color: #B9FFE1;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===========
+    Title
+=============== */
+.title h1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
+    text-shadow:
+        -1px -1px 0 #404DC6,
+        1px -1px 0 #404DC6,
+        -1px  1px 0 #404DC6,
+        1px  1px 0 #404DC6;
+
+    margin-left: 30%;
+    margin-top: 50px;
+}
+
+
+/* ==================
+    clouds
+====================== */
+.game-clouds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Top row */
+.game-clouds-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* All images */
+.game-clouds img {
+  width: 580px;
+  height: auto;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.game-clouds img:hover {
+  transform: scale(1.05);
+}
+
+#exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+#exit img {
+  height: 60px;
+  width: 60px;
+}
+
+#exit img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+@media (min-width: 1024px) {
+  .game-clouds img {
+    max-width: 520px;
+  }
+
+  .title h1 {
+    font-size: 38px;
+    margin-left: 30%;
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .game-clouds img {
+    width: 580px;
+  }
+
+  .title h1{
+    font-size: 50px;
+    margin-left: 25%;
+    margin-top: 70px;
+  }
+
+  #exit img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1920px ){
+  .game-clouds img {
+    width: 700px;
+  }
+
+  .title h1 {
+    font-size: 70px;
+    margin-left: 25%;
+    margin-top: 100px;
+  }
+
+  #exit img {
+    height: 60px;
+    width:60px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .game-clouds img {
+    width:900px;
+  }
+
+  .title h1 {
+    font-size: 80px;
+    margin-left: 25%;
+    margin-top: 120px;
+  }
+
+  #exit img {
+    height: 80px;
+    width: 80px;
+  }
+}

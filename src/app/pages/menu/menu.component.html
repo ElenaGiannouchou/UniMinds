@@ -1,0 +1,83 @@
+<div class="body">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+    </div>
+
+    <div class="header">
+        <app-navbar></app-navbar>
+    </div>
+
+    <div class="cloud">
+        <img src="Assets/cloud.png" alt="cloud">
+    </div>
+
+    <!-- <div class="videolist">
+        <div class="title">
+            <h1>Προτεινόμενα Βίντεο:</h1>
+        </div>
+        <div class="videos">
+            <img src="Assets/next-arrow.png" alt="next">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pUs9Zb6HVSY?si=q3k59XQEMUnTeUuu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div> -->
+
+    <div class="videolist">
+        <div class="title">
+            <h1>Προτεινόμενα Βίντεο:</h1>
+        </div>
+
+        <div class="videos-wrapper">
+            <div class="videos" id="videoScroll">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E01Fk7wTLf0?si=jySHL_vgWMTuLTrB"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OE9IYUoANak?si=C_YExFgYIGKDKFk3"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/boQT2_tdlyE?si=zgOj5l1b2mVsXdxI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0qbVvzi0rwc?si=XPyjYxIShubgHA5X"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dUtDaPLPv1w?si=Pv12BPxNYFAJFsN3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="arrow-box">
+                <img src="Assets/next-arrow.png" alt="next" class="next-arrow" (click)="scrollVideos()">
+            </div>
+        </div>
+
+
+        <footer class="footer" id="contact">
+            <div class="footer-box">
+                <img src="Assets/lamb.png" alt="Lamb">
+                <div class="footer-text">
+                    <h4>Επικοινωνήστε μαζί μας!</h4>
+                    <h4>inf2021041&#64;ionio.com</h4>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; {{ year }} Ελένη Γιαννούχου. Όλα τα δικαιώματα διατηρούνται.</p>
+                </div>
+
+                <div class="social">
+                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <img src="Assets/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <img src="Assets/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <img src="Assets/twitter.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </footer>

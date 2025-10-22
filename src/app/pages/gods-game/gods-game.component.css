@@ -1,0 +1,648 @@
+:host .body {
+  display: flex;
+  flex-direction: column;
+  background-color: #C1C6FC;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal overlay */
+.welcome-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.welcome-modal-content {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.welcome-modal-content h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #666A95;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Close button at top-right */
+#close-button {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#close-button img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+#close-button img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+/* Welcome GIF specific */
+.welcome-modal-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+#exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+#exit img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#exit img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+#back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+#back img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#back img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+
+}
+
+
+/* Matching area (the A = B part) */
+.match-pair {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color:#666A95;
+}
+
+.card-with-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.card-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color:#666A95;
+}
+
+.group-a-slot{
+  width: 110px;
+  height: 170px;
+  border: 2px solid #ccc;
+  background: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.group-b-slot {
+  width: 170px;
+  height: 80px ;
+  border: 2px solid #ccc;
+  background: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+.equals {
+  font-size: 2rem;
+}
+
+/* Groups container */
+.groups-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.vertical-line {
+  width: 2px;
+  background-color: #666A95;
+  height: 450px;
+}
+
+/* Each group */
+.group {
+  flex: 1;
+}
+
+.group h2 {
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #666A95;
+  text-decoration: underline;
+}
+
+.group-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.0rem;
+  justify-content: center;
+  margin-left:15px;
+}
+
+.group-items img {
+  width: 85px;
+  height: 155px;
+  cursor: pointer;
+}
+
+.name-card {
+  flex-wrap: wraps;
+  background: white;
+  padding: 1rem 1rem;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color:#000000;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 35px;
+}
+
+/* ==================
+    memes-modal
+===================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  /* padding: 20px; */
+  border-radius: 10px;
+  text-align: center;
+  height: auto;
+  width: 300px;
+}
+
+.modal-content img {
+  /* height: 250px; */
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.modal-content p.wrong   {
+  color: #ff1744;
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.modal-content p.correct {
+  color: #00c853;
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+/* Selected image inside matching area slot */
+.group-a-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.group-b-slot {
+  width: 170px;
+  height: 80px;
+  border: 2px solid #ccc;
+  background: white;
+  display: flex; /* ← make sure this is set */
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.group-b-slot .selected {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  margin-bottom: 34px;
+  margin-right: 20px;
+}
+
+@media (min-width: 1024px){
+  .match-pair {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .vertical-line {
+    width: 2px;
+    margin-top: 60px;
+    background-color: #666A95;
+    height: 380px;
+  }
+
+
+  .groups-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .group {
+    width: 100%;
+    margin-bottom: -3rem;
+    margin-top: -2rem;
+  }
+
+ .group-a-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-right: 20px;
+  }
+
+  .group-b-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-right: 20px;
+  }
+
+  .group-a-items img {
+    width:120px;
+    height: 200px;
+  }
+
+  .name-card {
+    width: 100px;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 18px;
+    gap: 20px;
+  }
+
+  .group-a-slot {
+    width: 90px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .group-b-slot {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: white;
+    border: 2px solid #666A95;
+    border-radius: 12px;
+    padding: 0;          /* No extra padding to avoid pushing content */
+    overflow: hidden;
+  }
+
+  .group-b-slot .selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;     /* Set a fixed size that fits cleanly */
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  #exit img {
+    height: 60px;
+    width: 60px;
+  }
+  #back img {
+    height: 60px;
+    width: 60px;
+  }
+
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .match-pair {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .vertical-line {
+    width: 2px;
+    background-color: #666A95;
+    height: 400px;
+  }
+
+  .groups-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+ .group-a-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-right: 20px;
+  }
+
+  .group-b-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-right: 20px;
+  }
+
+  #exit img {
+    height: 60px;
+    width: 60px;
+  }
+
+  #back img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .match-pair {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .group-a-slot {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .group-b-slot {
+    width: 250px;
+    height: 145px;
+    margin-bottom: 10px;
+  }
+
+  .group-b-slot .selected {
+    width: 90%;
+    height: 90%;
+    font-size: 2.1rem;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    margin-bottom: 34px;
+    margin-right: 20px;
+}
+
+  .card-label {
+    font-size: 36px;
+  }
+
+  .equals {
+    font-size: 100px;
+  }
+
+  .vertical-line {
+    width: 4px;
+    background-color: #666A95;
+    height:450px;
+    margin-bottom: 40px;
+  }
+
+  .groups-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .group {
+    width: 100%;
+    margin-bottom: 10rem;
+  }
+
+ .group-a-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-right: 20px;
+  }
+
+  .group-a-items img {
+    width: 145px;
+    height: 195px;
+  }
+
+  .group-b h2, .group-a h2 {
+    font-size: 36px;
+  }
+
+  .group-b-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    justify-items: center;
+    margin-right: 20px;
+  }
+
+  .name-card {
+    width: 150px;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  #exit img {
+    height: 60px;
+    width: 60px;
+  }
+
+  #back img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .modal-content {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: 500px;
+  }
+
+  .modal-content img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .modal-content p{
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .match-pair {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .group-a-slot {
+    width: 200px;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+
+  .group-b-slot {
+    width: 300px;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+
+  .group-b-slot .selected {
+    width: 90%;
+    height: 90%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    margin-bottom: 34px;
+    margin-right: 20px;
+}
+
+  .card-label {
+    font-size: 48px;
+  }
+
+  .equals {
+    font-size: 120px;
+  }
+
+  .vertical-line {
+    width: 6px;
+    background-color: #666A95;
+    height:600px;
+    margin-bottom: 40px;
+  }
+
+  .groups-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  .group-a-items img {
+    width: 155px;
+    height: 270px;
+  }
+
+  .name-card {
+    width: 200px;
+    height: 80px;
+    margin-left: 0;
+    margin-top: 20px;
+    font-size:36px;
+  }
+
+  .group-b h2, .group-a h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+
+  #exit img, #back img {
+    height: 80px;
+    width: 80px;
+  }
+
+}

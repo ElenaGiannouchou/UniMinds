@@ -1,0 +1,453 @@
+/* ===================
+   Global Styles
+=================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #404DC6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===================
+   Layout Container
+=================== */
+:host .body {
+  display: flex;
+  flex-direction: column;
+  background-color: #404DC6;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===================
+   Logo
+=================== */
+.logo {
+  height: 97px;
+  width: 372px;
+  margin-left: 30px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 400px;
+}
+
+
+
+/* ===================
+   Cloud Element
+=================== */
+.cloud {
+  position: absolute;
+  top: 150px;
+  left: 25%;
+  right: 100%;
+  z-index: 0;
+}
+
+.cloud img {
+  width: 800px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* ===================
+  Video List
+=================== */
+.videolist {
+  margin-top: 600px;
+  width: 100%;
+}
+
+.videolist .title h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.videolist .videos-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.videos-wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.videos-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px; /* adjust for how wide you want the fade */
+  height: 100%;
+  background: linear-gradient(to right, #D9C1FF, #D9C1FF);
+  z-index: 5;
+  pointer-events: none; /* so clicks go through */
+}
+
+
+.videolist .videos {
+  display: flex;
+  padding: 20px;
+  background-color: #D9C1FF;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 24px;
+}
+
+.videolist .videos iframe {
+  min-width: 380px;
+  height: 250px;
+  border: none;
+  flex-shrink: 0;
+}
+
+.videolist .videos::-webkit-scrollbar {
+  display: none;
+}
+
+
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.next-arrow:hover {
+  filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+/* ===================
+  Footer
+=================== */
+.footer {
+  background-color: white;
+  height: 400px;
+  width: 100%;
+  border-top-left-radius: 5% 15%;
+  border-top-right-radius: 5% 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px;
+}
+
+.footer-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-box img {
+  height: 400px;
+  display: block;
+  z-index: 1;
+}
+
+.footer-text {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-10%);
+  text-align: center;
+  z-index: 2;
+}
+
+.footer-text h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: black;
+  margin: 4px 0;
+}
+
+.footer .social {
+  position: absolute;
+  bottom: 20px;
+  margin-left: 1350px;
+  display: flex;
+  gap: 16px; /* space between icons */
+  z-index: 3;
+}
+
+.social img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.social a img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+  filter: brightness(1.2);
+}
+
+.copyright {
+  position: absolute;
+  left: -500px;   /* 20px from left */
+  bottom: 20px; /* 20px from bottom */
+}
+
+.copyright p {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  margin: 0;
+}
+
+@media(max-width: 768px) {
+  .logo img {
+    height: 60px;
+    width: 200px;
+    margin-left: 10px;
+  }
+
+
+  .footer {
+    height: 300px;
+  }
+
+  .footer-box img {
+    height: 300px;
+  }
+
+  .footer-text h4 {
+    font-size: 16px;
+  }
+
+  .social{
+    right: -320px;
+    gap: 5px;
+  }
+
+  .social img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .logo {
+    height: 90px;
+    width: 400px;
+    margin-left: 10px;
+  }
+
+  .footer {
+    height: 300px;
+  }
+
+  .footer-box img {
+    height: 300px;
+  }
+
+  .footer-text h4 {
+    font-size: 16px;
+  }
+
+  .social{
+    right: -470px;
+    gap: 5px;
+  }
+
+  .social img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .copyright{
+    font-size: 14px;
+    right: 20%;
+  }
+
+  .cloud{
+    top: 120px;
+    left: 20%;
+    right: 90%;
+  }
+
+  .cloud img{
+    width: 900px;
+    height: auto;
+  }
+
+  .videos-wrapper{
+    height: fit-content;
+    width: 100%;
+  }
+
+  .videos iframe{
+    width: 400px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .logo {
+    height: 90px;
+    width: 350px;
+    margin-left: 25px;
+  }
+
+  .footer {
+    height: 350px;
+  }
+
+  .footer-box img {
+    height: 350px;
+  }
+
+  .footer-text h4 {
+    font-size: 18px;
+  }
+
+  .social{
+    right: -490px;
+    gap: 5px;
+  }
+  .social img {
+    height: 45px;
+    width: 45px;
+  }
+
+}
+
+@media (min-width: 1920px) {
+  .copyright {
+    left: -500px;
+    font-size: 16px;
+  }
+
+  .footer {
+    height: 650px;
+    margin-top: 905px;
+  }
+
+  .footer-box img {
+    height: 650px;
+    margin-left: 70px;
+  }
+
+  .footer-text h4 {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  .social {
+    right: -480px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .social img {
+    height: 55px;
+    width: 55px;
+    margin-left: 10px;
+  }
+
+  .cloud{
+    position: absolute;
+    top: 180px;
+    left: 20%;
+    right: 70%;
+  }
+
+  .cloud img {
+    width: 1100px;
+  }
+
+  .videolist {
+    margin-top: 1400px;
+  }
+
+  .videolist h1{
+    font-size: 65px;
+    margin-left: 30px;
+  }
+
+  .videolist .videos .videos-wrapper {
+    height:200px;
+    width: 200px;
+  }
+
+  .next-arrow{
+    right: 20px;
+    width: 100px;
+    height: 100px;
+  }
+  .videolist .videos iframe{
+    margin-top: 0px;
+    width: 600px;
+    height: 400px;
+  }
+
+}
+
+@media (min-width: 2560px) {
+  .logo img {
+    height: 170px;
+    width: 750px;
+    margin-left: 50px;
+  }
+
+
+  .cloud img{
+    top: 200px;
+    left: 20%;
+    right: 80%;
+    width: 1600px;
+    height: 1200px;
+  }
+
+  .footer {
+    height: 800px;
+    margin-top: 1200px;
+  }
+
+  .footer-box img {
+    height: 800px;
+    margin-left: 100px;
+  }
+
+  .footer-text h4 {
+    font-size: 36px;
+    margin-top: 30px;
+    margin-left: 80px;
+  }
+
+  .social{
+    right: -690px;
+    gap: 10px;
+  }
+
+  .social img {
+    height: 70px;
+    width: 70px;
+    margin-left: 20px;
+  }
+
+  .copyright p{
+    font-size: 24px;
+  }
+
+  .copyright{
+    left: -700px;
+    font-size: 24px;
+  }
+
+}

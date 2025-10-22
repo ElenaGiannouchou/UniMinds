@@ -1,0 +1,328 @@
+/* ===================
+   Global Styles
+=================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #D9C1FF;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===================
+   Layout Container
+=================== */
+:host .body {
+  display: flex;
+  flex-direction: column;
+  background-color: #D9C1FF;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Modal overlay */
+.welcome-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.welcome-modal-content {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+}
+
+.welcome-modal-content h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #666A95;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Close button at top-right */
+#close-button {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#close-button img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+#close-button img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+/* Welcome GIF specific */
+.welcome-modal-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+#exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+#exit img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#exit img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+#back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+#back img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#back img:hover{
+    transform: scale(1.05);
+    filter: sepia(1) hue-rotate(-50deg) saturate(500%) brightness(0.8);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* adds spacing between problem and number pad */
+  height: 100vh;
+}
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.problem {
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #D2FFE6;
+
+}
+
+.number-pad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  border: 3px solid #666A95; /* Gray border */
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #666A95; /* Optional for contrast */
+}
+
+
+.number {
+  background-color: #c0c0f0;
+  border: none;
+  border-radius: 6px;
+  font-size: 80px;
+  padding: 50px 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color:#D2FFE6;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.number:hover {
+  background-color: #8d8dbd;
+}
+
+/* ==================
+    memes-modal
+===================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  /* padding: 20px; */
+  border-radius: 10px;
+  text-align: center;
+  height: auto;
+  width: 300px;
+}
+
+.modal-content img {
+  /* height: 250px; */
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.modal-content p.wrong   {
+  color: #ff1744;
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.modal-content p.correct {
+  color: #00c853;
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+@media (min-width: 1024px){
+  .problem {
+    font-size: 70px;
+  }
+
+  .number {
+    font-size: 60px;
+    padding: 30px 30px;
+  }
+
+  .number-pad {
+    grid-template-columns: repeat(5, 2fr);
+    gap: 5px;
+    padding: 5px;
+  }
+
+  #exit img, #back img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .problem {
+    font-size: 100px;
+  }
+
+  .number {
+    font-size: 62px;
+    padding: 70px 70px;
+  }
+
+  .number-pad {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  #exit img, #back img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .modal-content {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: 500px;
+  }
+
+  .modal-content img {
+    /* height: 250px; */
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .modal-content p{
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .problem {
+    font-size: 120px;
+  }
+
+  .number {
+    font-size: 80px;
+    padding: 90px 90px;
+  }
+
+  .number-pad {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #exit img, #back img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .modal-content {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: 600px;
+  }
+
+  .modal-content img {
+    /* height: 250px; */
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .modal-content p{
+    font-size: 30px;
+  }
+}

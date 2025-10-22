@@ -1,0 +1,60 @@
+<div class="body">
+  <a (click)="exitToMenu()" id="exit">
+    <img src="Assets/exit.png" alt="Exit">
+  </a>
+
+  <div class="filter">
+    <div class="tab" *ngFor="let tab of tabs; let i = index" [class.active]="activeTab === i" (click)="selectTab(i)">
+      {{ tab }}
+    </div>
+  </div>
+
+
+  <div class="chat-body">
+    <!-- Therapist bubble -->
+    <div class="message therapist">
+      <span class="label">Ψυχολόγος</span>
+      <div class="bubble">
+        <div class="inner-text">
+          Καλησπέρα! Θέλω να θυμάστε ότι κάθε παιδί με αυτισμό έχει τον δικό του ρυθμό και τις
+          δικές του ανάγκες. Η υποστήριξη που του παρέχετε μέσα από σταθερότητα, ρουτίνες και
+          προβλέψιμες καταστάσεις είναι πολύ σημαντική για να αισθάνεται ασφάλεια.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- User bubble -->
+    <div class="message user">
+      <span class="label">Εγώ</span>
+      <div class="bubble">
+        <div class="inner-text">
+          Βλέπω πώς το παιδί μου παίζει και μαθαίνει μέσα από τα παιχνίδια και τα βίντεο.
+          Παρατηρώ τι το κάνει να χαμογελά, πότε δυσκολεύεται και πώς προσπαθεί ξανά.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Input box (already have from your code) -->
+  <form action="">
+    <div class="input-wrap">
+      <textarea name="message" id="message" placeholder="Αποστολή μηνύματος......."></textarea>
+      <button type="submit">
+        <img src="Assets/send.png" alt="send">
+      </button>
+    </div>
+  </form>
+
+  <form action="">
+    <div class="input-wrap">
+      <textarea name="message" id="message" placeholder="Αποστολή μηνύματος......."></textarea>
+      <button type="submit">
+        <img src="Assets/send.png" alt="send">
+      </button>
+    </div>
+  </form>
+
+</div>

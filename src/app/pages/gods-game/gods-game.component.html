@@ -1,0 +1,80 @@
+<div class="body">
+  <!-- Exit + Back Buttons -->
+  <a (click)="exitToMenu()" id="exit">
+    <img src="Assets/exit.png" alt="Exit">
+  </a>
+  <a (click)="goToGodsInstructions()" id="back">
+    <img src="Assets/back.png" alt="Back">
+  </a>
+
+  <!--HintModal -->
+  <div *ngIf="showWelcomeModal" class="welcome-modal-overlay">
+    <div class="welcome-modal-content">
+      <h2>Βοήθεια!</h2>
+      <a (click)="closeWelcomeModal()" id="close-button">
+        <img src="Assets/exit.png" alt="Exit">
+      </a>
+      <img [src]="welcomeGif" alt="Welcome GIF" />
+    </div>
+  </div>
+
+
+
+  <!-- Matching Area Display -->
+  <div class="matching-area">
+    <div class="match-pair">
+      <div class="card-with-label">
+        <div class="card-label">A</div>
+        <div class="group-a-slot">
+          <img *ngIf="selectedGod" [src]="'Assets/' + selectedGod" alt="Selected God" />
+        </div>
+      </div>
+      <div class="equals">=</div>
+      <div class="card-with-label">
+        <div class="card-label">B</div>
+        <div class="group-b-slot">
+          <div *ngIf="selectedName" class="name-card selected">
+            {{ selectedName }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Group A - God Images -->
+  <div class="groups-container">
+    <div class="group group-a">
+      <h2>Ομάδα A</h2>
+      <div class="group-items group-a-items">
+        <img *ngFor="let god of randomizedGodImages" [src]="'Assets/' + god" [alt]="god" (click)="selectGod(god)"
+          [class.selected]="selectedGod === god">
+      </div>
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <!-- Group B - Name Cards -->
+    <div class="group group-b">
+      <h2>Ομάδα B</h2>
+      <div class="group-items group-b-items">
+        <div *ngFor="let card of randomizedCards; let i = index" class="name-card" (click)="selectName(card.name)"
+          (mouseenter)="hoveredIndex = i" (mouseleave)="hoveredIndex = null" [style.transform]="
+            'rotate(' + card.rotation + 'deg) translate(' + card.position.x + 'px, ' + card.position.y + 'px)' +
+            (hoveredIndex === i ? ' scale(1.1)' : '')
+          " [class.selected]="selectedName === card.name">
+          {{ card.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Meme Modal Feedback -->
+  <div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+      <img [src]="modalImage" alt="Meme" />
+      <p [ngClass]="matchWasWrong ? 'wrong' : 'correct'">
+        {{ matchWasWrong ? 'Προσπάθησε ξανά!' : 'Μπράβο! Σωστή απάντηση!' }}
+      </p>
+    </div>
+  </div>
+</div>
