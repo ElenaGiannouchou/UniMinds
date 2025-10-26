@@ -7,7 +7,7 @@
 
 ## Description
 
-UniMinds is an innovative educational platform designed specifically for children with autism. The platform leverages interactive games and resources to foster learning, engagement, and development in a supportive environment. UniMinds empowers children to explore topics such as Greek mythology, mathematics, and financial literacy, while also offer guidance for parents and specialists.
+UniMinds is an innovative educational platform designed specifically for children with autism. The platform leverages interactive games and resources to foster learning, engagement, and development in a supportive environment. UniMinds empowers children to explore topics such as Greek mythology, mathematics, and financial literacy, while also offer guidance for parents and specialists. You can read more about the project [here](docs/thesis_description.md).
 
 ## 🚀 Features
 
