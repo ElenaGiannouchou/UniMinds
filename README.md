@@ -62,8 +62,8 @@ UniMinds is an innovative educational platform designed specifically for childre
 After starting the application, users can:
 
 - Explore games and activities from the main menu.
-- Log in or register as a parent, specialist, or child.
-- Access advice and educational videos.
+- Log in or register as a parent, specialist, or child.(Under construction)
+- Access advice (Under construction) and educational videos.
 
 ## ⚙️ Technologies Used
 
