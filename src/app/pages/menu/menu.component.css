@@ -242,7 +242,7 @@ html, body {
 
 @media(min-width: 1024px) {
   .logo {
-    height: 90px;
+    height: 100px;
     width: 400px;
     margin-left: 10px;
   }
